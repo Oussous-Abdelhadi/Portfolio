@@ -43,6 +43,11 @@ header .header_mobile {
   position: relative;
 }
 
+section .title_titles, section .title_links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
 .logo {
   width: 3rem;
   height: auto;
