@@ -23,7 +23,7 @@ function showToggle() {
 
   // MODAL *******************************************************
 
-
+//  BLOG
   var detailProject = document.querySelector('#detailBlog');
   detailProject.addEventListener("click", showModalBlog);
   
@@ -32,6 +32,14 @@ function showToggle() {
     modal.style.display = "flex";
 }
 
+document.querySelector('#CloseBlogModal').addEventListener("click", closeModalBlog);
+function closeModalBlog() {
+  let modal = document.querySelector('.modalBlog');
+  modal.style.display = "none";
+}
+
+
+//  NASA
 var detailProject2 = document.querySelector('#detailAppNasa');
 detailProject2.addEventListener("click", showAppNasa);
 
@@ -40,11 +48,6 @@ function showAppNasa() {
   modal.style.display = "flex";
 }
 
-  document.querySelector('#CloseBlogModal').addEventListener("click", closeModalBlog);
-  function closeModalBlog() {
-    let modal = document.querySelector('.modalBlog');
-    modal.style.display = "none";
-  }
 
   document.querySelector('#CloseAppNasaModal').addEventListener("click", closeModal);
   function closeModal() {
@@ -52,3 +55,19 @@ function showAppNasa() {
     modal.style.display = "none";
   }
 
+//  SAINBIOSE
+
+var detailProject3 = document.querySelector('#detailSainbiose');
+detailProject3.addEventListener("click", showSainbiose);
+
+function showSainbiose() {
+  let modal = document.querySelector('.modalSainbiose');
+  modal.style.display = "flex";
+}
+
+
+  document.querySelector('#CloseSainbioseModal').addEventListener("click", closeModalSainbiose);
+  function closeModalSainbiose() {
+    let modal = document.querySelector('.modalSainbiose');
+    modal.style.display = "none";
+  }
