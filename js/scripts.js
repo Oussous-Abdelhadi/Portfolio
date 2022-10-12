@@ -1,54 +1,54 @@
-/*!
-* Start Bootstrap - Freelancer v7.0.6 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
+let hamburger = document.getElementsByClassName('hamburger');
 
-window.addEventListener('DOMContentLoaded', event => {
+document.querySelector('.hamburger').addEventListener("click", showToggle);
 
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
+function showToggle() {
+    let content = document.querySelector('.content');
+    console.log(content);
+    if (content.style.display === "flex") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "flex";
+    }
+  }
+  var link_project = document.querySelector('#linkProject');
+  if (link_project) {
+    link_project.addEventListener("click", redirectProject);
+  }
 
-    };
+  function redirectProject() {
+    window.open("https://github.com/Oussous-Abdelhadi")
+  }
 
-    // Shrink the navbar 
-    navbarShrink();
 
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
+  // MODAL *******************************************************
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 72,
-        });
-    };
 
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
+  var detailProject = document.querySelector('#detailBlog');
+  detailProject.addEventListener("click", showModalBlog);
+  
+  function showModalBlog() {
+    let modal = document.querySelector('.modalBlog');
+    modal.style.display = "flex";
+}
 
-});
+var detailProject2 = document.querySelector('#detailAppNasa');
+detailProject2.addEventListener("click", showAppNasa);
+
+function showAppNasa() {
+  let modal = document.querySelector('.modalAppNasa');
+  modal.style.display = "flex";
+}
+
+  document.querySelector('#CloseBlogModal').addEventListener("click", closeModalBlog);
+  function closeModalBlog() {
+    let modal = document.querySelector('.modalBlog');
+    modal.style.display = "none";
+  }
+
+  document.querySelector('#CloseAppNasaModal').addEventListener("click", closeModal);
+  function closeModal() {
+    let modal = document.querySelector('.modalAppNasa');
+    modal.style.display = "none";
+  }
+
