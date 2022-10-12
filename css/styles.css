@@ -380,6 +380,7 @@ div.content{
   height: 10rem;
   box-shadow: -5px 0 4px rgb(17 75 95 / 30%);
   display: none;
+  z-index: 301;
 }
 
 div.content nav{
