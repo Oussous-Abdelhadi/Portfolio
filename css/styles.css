@@ -373,7 +373,7 @@ main.main_projects .projects_container .integrations a.global_link {
 
 div.content{
   background: rgba(82,183,136) ;
-  position: absolute;
+  position: fixed;
   top: 6rem;
   right: 0;
   width: 15rem;
