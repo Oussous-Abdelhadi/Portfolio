@@ -17,7 +17,7 @@ function showToggle() {
   }
 
   function redirectProject() {
-    window.open("https://github.com/Oussous-Abdelhadi")
+    window.open("https://github.com/Oussous-Abdelhadi");
   }
 
 
