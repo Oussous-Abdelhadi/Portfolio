@@ -468,6 +468,15 @@ color: #fff
 }
 
 @media screen and (min-width:900px) {
+
+  .integrations ul{
+    overflow: scroll;
+    height: 80%;
+  }
+
+  .projects_container {
+    max-height: 50vh;
+  }
   .modal__container {
     max-width: 30rem;
 }
