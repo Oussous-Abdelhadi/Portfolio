@@ -23,6 +23,21 @@ function showToggle() {
 
   // MODAL *******************************************************
 
+  //  COUNTRIES
+  var detailProject = document.querySelector('#detailCountries');
+  detailProject.addEventListener("click", showModalCountries);
+  
+  function showModalCountries() {
+    let modal = document.querySelector('.modalCountries');
+    modal.style.display = "flex";
+}
+
+document.querySelector('#CloseCountriesModal').addEventListener("click", CloseModalCountries);
+function CloseModalCountries() {
+  let modal = document.querySelector('.modalCountries');
+  modal.style.display = "none";
+}
+
 //  BLOG
   var detailProject = document.querySelector('#detailBlog');
   detailProject.addEventListener("click", showModalBlog);
