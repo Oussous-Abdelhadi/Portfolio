@@ -11,21 +11,23 @@ function showToggle() {
         content.style.display = "flex";
     }
   }
-  var link_project = document.querySelector('#linkProject');
-  if (link_project) {
-    link_project.addEventListener("click", redirectProject);
-  }
+  var link_project = document.querySelectorAll('.linkProject');
+
+  link_project.forEach(element => {
+    element.addEventListener("click", redirectProject);
+  });
 
   function redirectProject() {
-    window.open("https://github.com/Oussous-Abdelhadi");
+    window.location = "projets.html";
   }
 
 
   // MODAL *******************************************************
-
+if (document.querySelector('#detailCountries')) {
+  
   //  COUNTRIES
-  var detailProject = document.querySelector('#detailCountries');
-  detailProject.addEventListener("click", showModalCountries);
+  var detailProject_Countries = document.querySelector('#detailCountries');
+  detailProject_Countries.addEventListener("click", showModalCountries);
   
   function showModalCountries() {
     let modal = document.querySelector('.modalCountries');
@@ -45,9 +47,9 @@ function CloseModalCountries() {
   function showModalBlog() {
     let modal = document.querySelector('.modalBlog');
     modal.style.display = "flex";
-}
+  }
 
-document.querySelector('#CloseBlogModal').addEventListener("click", closeModalBlog);
+  document.querySelector('#CloseBlogModal').addEventListener("click", closeModalBlog);
 function closeModalBlog() {
   let modal = document.querySelector('.modalBlog');
   modal.style.display = "none";
@@ -86,3 +88,4 @@ function showSainbiose() {
     let modal = document.querySelector('.modalSainbiose');
     modal.style.display = "none";
   }
+}
